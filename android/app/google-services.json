@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "799255119636",
+    "project_id": "react-assignment-aca38",
+    "storage_bucket": "react-assignment-aca38.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:799255119636:android:1a4b2105406cf88cc3e401",
+        "android_client_info": {
+          "package_name": "com.example.assignment4"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "799255119636-r327ji32cv5usucvfgdr5j0hus6ovt7q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEGfZV6tEjL8jbjA-lOYPHRwcbyFwgYLQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "799255119636-r327ji32cv5usucvfgdr5j0hus6ovt7q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
