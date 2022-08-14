@@ -84,19 +84,27 @@ class BlogTile extends StatelessWidget {
     return GestureDetector(
       onTap: () {
 
+
       },
       child: Container(
-        margin: EdgeInsets.only(bottom: 16),
+        margin: EdgeInsets.only(
+          bottom: 20,
+
+        ),
+        padding: EdgeInsets.symmetric(
+          horizontal: 10,
+          vertical: 5,
+        ),
         child: Column(
           children: [
             ClipRRect(
                 borderRadius: BorderRadius.circular(5),
-                child: Image.network("newsImageUrl")),
+                child: Image.network(newsImageUrl)),
             SizedBox(
               height: 8,
             ),
             Text(
-              "newsTitle",
+              newsTitle,
               style: TextStyle(
                   fontSize: 18,
                   color: Colors.black,
@@ -106,7 +114,7 @@ class BlogTile extends StatelessWidget {
               height: 5,
             ),
             Text(
-              "newsDescription",
+              newsDescription,
               style: TextStyle(color: Colors.grey),
             ),
           ],

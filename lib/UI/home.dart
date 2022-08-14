@@ -26,12 +26,28 @@ class _HomeState extends State<Home> {
     setState((){
       _selectedIndex=index;
     });
-    pageController.animateToPage(index, duration: Duration(milliseconds: 1000), curve: Curves.easeIn);
+    pageController.animateToPage(index, duration: Duration(milliseconds: 500), curve: Curves.easeIn);
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text("Web Apps: Assignment 4"),
+            Text(
+              "Assignment 4",
+              style: TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),
+            )
+          ],
+        ),
+        elevation: 0,
+        automaticallyImplyLeading: false,
+
+      ),
+
       bottomNavigationBar: BottomNavigationBar(
         unselectedItemColor: Colors.grey,
         selectedItemColor: Colors.blueAccent,
@@ -40,7 +56,7 @@ class _HomeState extends State<Home> {
         items: [
         BottomNavigationBarItem(icon: Icon(Icons.home),label: "News"),
         BottomNavigationBarItem(icon: Icon(Icons.cloud),label: "Weather"),
-        BottomNavigationBarItem(icon: Icon(Icons.dashboard),label: "News"),
+        BottomNavigationBarItem(icon: Icon(Icons.dashboard),label: "ToDos"),
       ],
 
       ),

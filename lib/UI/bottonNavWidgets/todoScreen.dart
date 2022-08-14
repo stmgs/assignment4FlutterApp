@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:assignment4/models/todo.dart';
 import 'package:assignment4/helper/colors.dart';
+import 'package:assignment4/UI/bottonNavWidgets/todo_item.dart';
 
 class TodoScreen extends StatefulWidget {
   const TodoScreen({Key? key}) : super(key: key);
@@ -20,13 +21,10 @@ class _TodoScreenState extends State<TodoScreen> {
     super.initState();
   }
 
-
-
   @override
   Widget build(BuildContext context) {
-    return return Scaffold(
+    return Scaffold(
       backgroundColor: tdBGColor,
-      appBar: _buildAppBar(),
       body: Stack(
         children: [
           Container(
