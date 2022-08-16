@@ -20,6 +20,7 @@ class WeatherFetch {
 
     final jsonData = jsonDecode(response.body);
 
+    //convert weather data to model class
     weather = WeatherModel(
 
       temp: jsonData['main']['temp'].toDouble(),

@@ -9,6 +9,7 @@ class ToDo {
     this.isDone = false,
   });
 
+  //static list of todos to begin with
   static List<ToDo> todoList() {
     return [
       ToDo(id: '01', todoText: 'Web Apps Assignment 4', isDone: true ),

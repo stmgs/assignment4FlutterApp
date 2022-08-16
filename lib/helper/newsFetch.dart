@@ -13,6 +13,7 @@ class NewsFetch {
 
     var jsonData = jsonDecode(response.body);
 
+    //map json response body data to model class
     if (jsonData['status'] == 'ok') {
       jsonData['articles'].forEach((element) {
         if (element['urlToImage'] != null
