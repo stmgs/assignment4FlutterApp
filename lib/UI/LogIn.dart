@@ -14,6 +14,7 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  //controllers for input fields
    TextEditingController _passwordTextController = TextEditingController();
    TextEditingController _emailTextController = TextEditingController();
   @override
@@ -30,6 +31,7 @@ class _LoginState extends State<Login> {
                 20, MediaQuery.of(context).size.height * 0.2, 20, 0),
             child: Column(
               children: <Widget>[
+                //
                 logoWidget("assets/images/logo.png"),
                 const SizedBox(
                   height: 30,
@@ -45,6 +47,7 @@ class _LoginState extends State<Login> {
                   height: 5,
                 ),
                 firebaseUIButton(context, "Sign In", () {
+                  //firebase login
                   FirebaseAuth.instance
                       .signInWithEmailAndPassword(
                       email: _emailTextController.text,
@@ -65,6 +68,7 @@ class _LoginState extends State<Login> {
     );
   }
 
+  //signup text to navigate to signup screen
   Row signUpOption() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -85,20 +89,4 @@ class _LoginState extends State<Login> {
     );
   }
 
-  Widget forgetPassword(BuildContext context) {
-    return Container(
-      width: MediaQuery.of(context).size.width,
-      height: 35,
-      alignment: Alignment.bottomRight,
-      child: TextButton(
-        child: const Text(
-          "Forgot Password?",
-          style: TextStyle(color: Colors.black),
-          textAlign: TextAlign.right,
-        ),
-        onPressed: () =>{}
-           // Navigator.push(context, MaterialPageRoute(builder: (context) => ResetPassword())),
-      ),
-    );
-  }
 }

@@ -18,7 +18,6 @@ class _DashboardState extends State<Dashboard> {
   @override
   void initState() {
     super.initState();
-    print('inside news');
     getNews();
   }
 

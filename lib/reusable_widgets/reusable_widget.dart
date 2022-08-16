@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-//this file contains reusable components
+//this file contains reusable components like input fields and buttons
 
+//image
 Image logoWidget(String imageName) {
   return Image.asset(
     imageName,
@@ -11,6 +12,7 @@ Image logoWidget(String imageName) {
   );
 }
 
+//input/text field
 TextField reusableTextField(String text, IconData icon, bool isPasswordType,
     TextEditingController controller) {
   return TextField(
@@ -40,6 +42,7 @@ TextField reusableTextField(String text, IconData icon, bool isPasswordType,
   );
 }
 
+//login and signup button
 Container firebaseUIButton(BuildContext context, String title, Function onTap) {
   return Container(
     width: MediaQuery.of(context).size.width,

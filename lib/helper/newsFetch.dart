@@ -5,9 +5,7 @@ import 'package:http/http.dart' as http;
 class NewsFetch {
   List<ArticleModel> news = [];
 
-
   Future<void> getNews() async {
-    print('inside getnews');
     String baseUrl =
         "https://newsapi.org/v2/top-headlines?country=us&category=general&apiKey=08b403e85fe94d2d9d3418504f1d1803";
     var url = Uri.parse(baseUrl);

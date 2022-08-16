@@ -1,10 +1,11 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:assignment4/models/weather.dart';
+import 'package:assignment4/models/weatherModel.dart';
 
-class DataService {
-  Future<WeatherResponse> getWeather(String city) async {
-    // api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
+class WeatherFetch {
+  late WeatherModel weather;
+
+  Future<void> getWeather(String city) async {
 
     final queryParameters = {
       'q': city,
@@ -17,8 +18,15 @@ class DataService {
 
     final response = await http.get(uri);
 
-    final json = jsonDecode(response.body);
-    print('${jsonDecode(response.body)}');
-    return WeatherResponse.fromJson(json);
+    final jsonData = jsonDecode(response.body);
+
+    weather = WeatherModel(
+
+      temp: jsonData['main']['temp'].toDouble(),
+      feelsLike: jsonData['main']['feels_like'].toDouble(),
+      low: jsonData['main']['temp_min'].toDouble(),
+      high: jsonData['main']['temp_max'].toDouble(),
+      description: jsonData['weather'][0]['description'],
+    );
   }
 }
